@@ -1,0 +1,114 @@
+brand,model,YOM,part,price,shop,part_category,severity,vehicle_type
+Toyota,Aqua,2015,Front Bumper,45000,Car Mart,Body Parts,Medium,Car
+Toyota,Aqua,2015,Windshield,38500,David Pieris,Glass,High,Car
+Toyota,Aqua,2015,Headlight Assembly,32500,Unit#d Motors,Lights,Medium,Car
+Toyota,Aqua,2015,Air Filter,4500,Car Mart,Engine Parts,Low,Car
+Toyota,Aqua,2015,Brake Pads,12500,Stafford Motor,Brakes,Medium,Car
+Toyota,Aqua,2015,Spark Plugs,3200,David Pieris,Engine Parts,Low,Car
+Toyota,Aqua,2015,Shock Absorber,21500,Unit#d Motors,Suspension,Medium,Car
+Toyota,Aqua,2015,Alternator,34500,Car Mart,Electrical,High,Car
+Toyota,Aqua,2015,Battery,24500,Stafford Motor,Electrical,Medium,Car
+Toyota,Aqua,2015,Radiator,23400,David Pieris,Cooling,Medium,Car
+Toyota,Aqua,2015,AC Compressor,42500,Unit#d Motors,AC System,High,Car
+Toyota,Aqua,2015,CVT Fluid,4200,Car Mart,Fluids,Low,Car
+Toyota,Aqua,2015,Timing Belt,15600,Stafford Motor,Engine Parts,High,Car
+Toyota,Aqua,2015,Power Window Motor,12500,David Pieris,Electrical,Medium,Car
+Toyota,Aqua,2015,Wheel Bearing,8500,Unit#d Motors,Suspension,Medium,Car
+Toyota,Aqua,2015,Tie Rod End,6200,Car Mart,Steering,Medium,Car
+Toyota,Aqua,2015,Stabilizer Link,4500,Stafford Motor,Suspension,Low,Car
+Toyota,Aqua,2015,Engine Mount,15600,David Pieris,Engine Parts,Medium,Car
+Toyota,Aqua,2015,Transmission Mount,12800,Unit#d Motors,Transmission,Medium,Car
+Toyota,Aqua,2015,Fuel Pump,15600,Car Mart,Fuel System,High,Car
+Toyota,Aqua,2015,Throttle Body,18500,Stafford Motor,Engine Parts,High,Car
+Toyota,Aqua,2015,Mass Air Flow Sensor,12500,David Pieris,Engine Parts,High,Car
+Toyota,Aqua,2015,Oxygen Sensor,9800,Unit#d Motors,Engine Parts,Medium,Car
+Toyota,Aqua,2015,Catalytic Converter,45600,Car Mart,Exhaust,High,Car
+Toyota,Aqua,2015,Muffler,25600,Stafford Motor,Exhaust,Medium,Car
+Toyota,Aqua,2015,Drive Shaft,32500,David Pieris,Transmission,High,Car
+Toyota,Aqua,2015,CV Joint,15600,Unit#d Motors,Transmission,Medium,Car
+Toyota,Aqua,2015,Wheel Rim,12500,Car Mart,Wheels,Medium,Car
+Toyota,Aqua,2015,Tire,18500,Stafford Motor,Wheels,Medium,Car
+Toyota,Aqua,2015,Brake Disc,16800,David Pieris,Brakes,Medium,Car
+Toyota,Aqua,2015,Brake Caliper,18500,Unit#d Motors,Brakes,Medium,Car
+Toyota,Aqua,2015,ABS Sensor,8900,Car Mart,Brakes,High,Car
+Toyota,Aqua,2015,Steering Rack,45600,Stafford Motor,Steering,High,Car
+Toyota,Aqua,2015,Power Steering Pump,28600,David Pieris,Steering,High,Car
+Toyota,Aqua,2015,AC Condenser,28600,Unit#d Motors,AC System,Medium,Car
+Toyota,Aqua,2015,Blower Motor,12500,Car Mart,AC System,Medium,Car
+Toyota,Aqua,2015,Evaporator,35600,Stafford Motor,AC System,High,Car
+Toyota,Aqua,2015,Compressor Clutch,15600,David Pieris,AC System,Medium,Car
+Toyota,Aqua,2015,Radiator Fan,9800,Unit#d Motors,Cooling,Medium,Car
+Toyota,Aqua,2015,Thermostat,3200,Car Mart,Cooling,Low,Car
+Toyota,Aqua,2015,Water Pump,15600,Stafford Motor,Cooling,High,Car
+Toyota,Aqua,2015,Oil Pump,12500,David Pieris,Engine Parts,High,Car
+Toyota,Aqua,2015,Cylinder Head,78500,Unit#d Motors,Engine Parts,High,Car
+Toyota,Aqua,2015,Piston Ring Set,18500,Car Mart,Engine Parts,High,Car
+Toyota,Aqua,2015,Valve Cover Gasket,4500,Stafford Motor,Engine Parts,Low,Car
+Toyota,Aqua,2015,Head Gasket,25600,David Pieris,Engine Parts,High,Car
+Toyota,Aqua,2015,Timing Chain,28500,Unit#d Motors,Engine Parts,High,Car
+Toyota,Aqua,2015,Camshaft Sensor,8500,Car Mart,Engine Parts,Medium,Car
+Toyota,Aqua,2015,Crankshaft Sensor,9200,Stafford Motor,Engine Parts,Medium,Car
+Toyota,Aqua,2015,Knock Sensor,6800,David Pieris,Engine Parts,Medium,Car
+Toyota,Aqua,2015,Ignition Coil,5200,Unit#d Motors,Engine Parts,Medium,Car
+Toyota,Aqua,2015,Starter Motor,32400,Car Mart,Electrical,High,Car
+Toyota,Aqua,2015,Alternator,34500,Stafford Motor,Electrical,High,Car
+Toyota,Aqua,2015,Fuse Box,12500,David Pieris,Electrical,Medium,Car
+Toyota,Aqua,2015,Wiring Harness,45600,Unit#d Motors,Electrical,High,Car
+Toyota,Aqua,2015,ECU,125000,Car Mart,Electrical,High,Car
+Toyota,Aqua,2015,Instrument Cluster,45600,Stafford Motor,Electrical,High,Car
+Toyota,Aqua,2015,Speed Sensor,4500,David Pieris,Electrical,Medium,Car
+Toyota,Aqua,2015,Fuel Level Sensor,6200,Unit#d Motors,Fuel System,Medium,Car
+Toyota,Aqua,2015,Fuel Injector,12500,Car Mart,Fuel System,High,Car
+Toyota,Aqua,2015,Fuel Rail,9800,Stafford Motor,Fuel System,Medium,Car
+Toyota,Aqua,2015,Fuel Filter,3200,David Pieris,Fuel System,Low,Car
+Toyota,Aqua,2015,Oil Filter,2800,Unit#d Motors,Engine Parts,Low,Car
+Toyota,Aqua,2015,Air Filter,4500,Car Mart,Engine Parts,Low,Car
+Toyota,Aqua,2015,Cabin Filter,2500,Stafford Motor,AC System,Low,Car
+Toyota,Aqua,2015,Transmission Filter,6500,David Pieris,Transmission,Medium,Car
+Toyota,Aqua,2015,Power Steering Filter,3800,Unit#d Motors,Steering,Low,Car
+Toyota,Aqua,2015,Brake Master Cylinder,25600,Car Mart,Brakes,High,Car
+Toyota,Aqua,2015,Brake Booster,18500,Stafford Motor,Brakes,High,Car
+Toyota,Aqua,2015,Clutch Master Cylinder,12500,David Pieris,Transmission,Medium,Car
+Toyota,Aqua,2015,Clutch Slave Cylinder,8500,Unit#d Motors,Transmission,Medium,Car
+Toyota,Aqua,2015,Clutch Kit,22500,Car Mart,Transmission,High,Car
+Toyota,Aqua,2015,Flywheel,32500,Stafford Motor,Transmission,High,Car
+Toyota,Aqua,2015,Transfer Case,78500,David Pieris,Transmission,High,Car
+Toyota,Aqua,2015,Differential,95600,Unit#d Motors,Transmission,High,Car
+Toyota,Aqua,2015,Drive Belt,4500,Car Mart,Engine Parts,Low,Car
+Toyota,Aqua,2015,Serpentine Belt,5200,Stafford Motor,Engine Parts,Low,Car
+Toyota,Aqua,2015,Tensioner Pulley,6800,David Pieris,Engine Parts,Medium,Car
+Toyota,Aqua,2015,Idler Pulley,4500,Unit#d Motors,Engine Parts,Medium,Car
+Toyota,Aqua,2015,Radiator Hose,3200,Car Mart,Cooling,Low,Car
+Toyota,Aqua,2015,Heater Hose,2800,Stafford Motor,Cooling,Low,Car
+Toyota,Aqua,2015,Fuel Hose,1800,David Pieris,Fuel System,Low,Car
+Toyota,Aqua,2015,Brake Hose,2200,Unit#d Motors,Brakes,Low,Car
+Toyota,Aqua,2015,Power Steering Hose,3800,Car Mart,Steering,Low,Car
+Toyota,Aqua,2015,AC Hose,5200,Stafford Motor,AC System,Medium,Car
+Toyota,Aqua,2015,Engine Oil,4500,David Pieris,Fluids,Low,Car
+Toyota,Aqua,2015,Transmission Fluid,3800,Unit#d Motors,Fluids,Low,Car
+Toyota,Aqua,2015,Brake Fluid,1500,Car Mart,Fluids,Low,Car
+Toyota,Aqua,2015,Power Steering Fluid,1800,Stafford Motor,Fluids,Low,Car
+Toyota,Aqua,2015,Coolant,2200,David Pieris,Fluids,Low,Car
+Toyota,Aqua,2015,AC Refrigerant,3500,Unit#d Motors,Fluids,Low,Car
+Toyota,Aqua,2015,Windshield Washer Fluid,800,Car Mart,Fluids,Low,Car
+Toyota,Aqua,2015,Headlight Bulb,1200,Stafford Motor,Lights,Low,Car
+Toyota,Aqua,2015,Fog Light Bulb,800,David Pieris,Lights,Low,Car
+Toyota,Aqua,2015,Brake Light Bulb,600,Unit#d Motors,Lights,Low,Car
+Toyota,Aqua,2015,Indicator Bulb,500,Car Mart,Lights,Low,Car
+Toyota,Aqua,2015,Reverse Light Bulb,700,Stafford Motor,Lights,Low,Car
+Toyota,Aqua,2015,License Plate Bulb,400,David Pieris,Lights,Low,Car
+Toyota,Aqua,2015,Dome Light Bulb,450,Unit#d Motors,Lights,Low,Car
+Toyota,Aqua,2015,Horn,3200,Car Mart,Electrical,Low,Car
+Toyota,Aqua,2015,Windshield Wiper Motor,12500,Stafford Motor,Electrical,Medium,Car
+Toyota,Aqua,2015,Wiper Blade,2200,David Pieris,Electrical,Low,Car
+Toyota,Aqua,2015,Antenna,1800,Unit#d Motors,Electrical,Low,Car
+Toyota,Aqua,2015,Radio Unit,25600,Car Mart,Electrical,Medium,Car
+Toyota,Aqua,2015,Speaker,4500,Stafford Motor,Electrical,Low,Car
+Toyota,Aqua,2015,Amplifier,15600,David Pieris,Electrical,Medium,Car
+Toyota,Aqua,2015,GPS Navigation,45600,Unit#d Motors,Electrical,High,Car
+Toyota,Aqua,2015,Reverse Camera,12500,Car Mart,Electrical,Medium,Car
+Toyota,Aqua,2015,Parking Sensor,8500,Stafford Motor,Electrical,Medium,Car
+Toyota,Aqua,2015,Alarm System,15600,David Pieris,Electrical,Medium,Car
+Toyota,Aqua,2015,Central Locking Actuator,6800,Unit#d Motors,Electrical,Medium,Car
+Toyota,Aqua,2015,Key Remote,12500,Car Mart,Electrical,Medium,Car
+Toyota,Aqua,2015,Immobilizer Unit,25600,Stafford Motor,Electrical,High,Car

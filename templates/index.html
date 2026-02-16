@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Damage Cost Predictor</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+        h1 { text-align: center; color: #333; }
+        form { background: #f4f4f4; padding: 20px; border-radius: 8px; }
+        input[type="file"] { margin-bottom: 15px; }
+        .result-box { margin-top: 30px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        .result-box img { max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px; }
+        .cost { font-size: 1.5em; font-weight: bold; color: green; }
+    </style>
+</head>
+<body>
+    <h1>🚗 Vehicle Damage Prediction</h1>
+    <form method="POST" action="/predict" enctype="multipart/form-data">
+        <label for="file">Upload Car Damage Image:</label>
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Predict Cost</button>
+    </form>
+
+    {% if result %}
+    <div class="result-box">
+        <h2>Prediction Results:</h2>
+        <img src="{{ url_for('static', filename=result.filepath) }}" alt="Uploaded Image">
+        <p><strong>Predicted Damage Class:</strong> {{ result.class }}</p>
+        <p><strong>Estimated Repair Cost:</strong> <span class="cost">{{ result.cost }}</span></p>
+    </div>
+    {% endif %}
+
+</body>
+</html>

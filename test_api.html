@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .container {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        h1 { color: #333; }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover { background: #45a049; }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            display: none;
+        }
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        .success {
+            color: green;
+        }
+        img {
+            max-width: 400px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        #loading {
+            display: none;
+            color: #2196F3;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Python API Test Page</h1>
+        <p>Use this page to test if your Python Flask API is working correctly.</p>
+        
+        <h3>Step 1: Check API Health</h3>
+        <button onclick="checkHealth()">Check API Status</button>
+        <div id="healthResult"></div>
+        
+        <h3>Step 2: Test Prediction</h3>
+        <input type="file" id="imageFile" accept="image/*">
+        <button onclick="testPrediction()">Upload & Predict</button>
+        <div id="loading">⏳ Processing...</div>
+        <div id="error" class="error"></div>
+        
+        <div id="result" class="result">
+            <h3>Prediction Results:</h3>
+            <img id="previewImage" src="" alt="Uploaded image">
+            <p><strong>Predicted Class:</strong> <span id="predictedClass"></span></p>
+            <p><strong>Estimated Cost:</strong> <span id="estimatedCost" style="color: green; font-size: 1.2em;"></span></p>
+            <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+            <details>
+                <summary>All Predictions</summary>
+                <div id="allPredictions"></div>
+            </details>
+        </div>
+    </div>
+
+    <script>
+        const API_URL = 'http://localhost:5000';
+
+        async function checkHealth() {
+            const resultDiv = document.getElementById('healthResult');
+            try {
+                const response = await fetch(`${API_URL}/health`);
+                const data = await response.json();
+                
+                if (data.status === 'healthy') {
+                    resultDiv.innerHTML = '<p class="success">✅ API is running and healthy!</p>';
+                    resultDiv.innerHTML += `<p>Model loaded: ${data.model_loaded ? '✅ Yes' : '❌ No'}</p>`;
+                } else {
+                    resultDiv.innerHTML = '<p class="error">⚠️ API responded but status is not healthy</p>';
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="error">❌ Cannot connect to API. Make sure it's running on ${API_URL}</p>`;
+                resultDiv.innerHTML += `<p class="error">Error: ${error.message}</p>`;
+            }
+        }
+
+        async function testPrediction() {
+            const fileInput = document.getElementById('imageFile');
+            const errorDiv = document.getElementById('error');
+            const resultDiv = document.getElementById('result');
+            const loadingDiv = document.getElementById('loading');
+
+            // Clear previous results
+            errorDiv.textContent = '';
+            resultDiv.style.display = 'none';
+
+            if (!fileInput.files || fileInput.files.length === 0) {
+                errorDiv.textContent = 'Please select an image file first!';
+                return;
+            }
+
+            const file = fileInput.files[0];
+
+            // Validate file type
+            if (!file.type.startsWith('image/')) {
+                errorDiv.textContent = 'Please select a valid image file!';
+                return;
+            }
+
+            try {
+                loadingDiv.style.display = 'block';
+
+                // Create form data
+                const formData = new FormData();
+                formData.append('file', file);
+
+                // Send to API
+                const response = await fetch(`${API_URL}/api/predict`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                loadingDiv.style.display = 'none';
+
+                if (!response.ok) {
+                    throw new Error(`API returned status ${response.status}`);
+                }
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // Display results in Sri Lankan Rupees
+                    document.getElementById('predictedClass').textContent = data.data.predicted_class;
+                    document.getElementById('estimatedCost').textContent = `Rs. ${data.data.estimated_cost.toLocaleString('en-LK')}`;
+                    document.getElementById('confidence').textContent = `${data.data.confidence}%`;
+
+                    // Display all predictions
+                    const allPredsDiv = document.getElementById('allPredictions');
+                    let allPredsHtml = '<ul>';
+                    for (const [className, confidence] of Object.entries(data.data.all_predictions)) {
+                        allPredsHtml += `<li>${className}: ${confidence}%</li>`;
+                    }
+                    allPredsHtml += '</ul>';
+                    allPredsDiv.innerHTML = allPredsHtml;
+
+                    // Show preview image
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('previewImage').src = e.target.result;
+                    };
+                    reader.readAsDataURL(file);
+
+                    resultDiv.style.display = 'block';
+                } else {
+                    errorDiv.textContent = `Prediction failed: ${data.error}`;
+                }
+
+            } catch (error) {
+                loadingDiv.style.display = 'none';
+                errorDiv.textContent = `Error: ${error.message}. Make sure the API is running!`;
+            }
+        }
+
+        // Check health on page load
+        window.onload = function() {
+            setTimeout(checkHealth, 500);
+        };
+    </script>
+</body>
+</html>
